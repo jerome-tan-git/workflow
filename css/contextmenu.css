@@ -11,7 +11,11 @@
  *   GPL v3 http://opensource.org/licenses/GPL-3.0
  *
  */
-
+.my_label
+{
+	font-weight:bold !important;
+	font-family: "Times New Roman",Georgia,Serif  !important;
+}
 .context-menu-list {
     margin:0; 
     padding:0;

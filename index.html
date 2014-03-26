@@ -421,18 +421,22 @@
 		    init:function(width, height)
 		    {
 		      this._super(width, height);
-		    
+		      //var msg = new draw2d.shape.note.PostIt("<b>DoubleClick</b> on the \nlabel to edit the text.");
+	 		  //this.addFigure(msg, new draw2d.layout.locator.CenterLocator(this));
 		      // Create any Draw2D figure as decoration for the connection
 		      //
-		      this.label = new draw2d.shape.basic.Label("I'm a Label");
-		      this.label.setColor("#0d0d0d");
-		      this.label.setFontColor("#0d0d0d");
-		      
+		      //var greenRect = new draw2d.shape.basic.Rectangle(20, 20);
+    		  //greenRect.setBackgroundColor('#008800');
+		      var label_1 = new draw2d.shape.basic.Label("I'm a Label");
+		      label_1.setOutlineStroke(0); 
+		      label_1.addCssClass("my_label");
+		      alert(label_1.getCssClass());
 		      // add the new decoration to the connection with a position locator.
 		      //
-		      this.addFigure(this.label, new draw2d.layout.locator.CenterLocator(this));
+		      this.addFigure(label_1, new draw2d.layout.locator.XYAbsPortLocator(20,20));
+		      //this.addFigure(greenRect, new draw2d.layout.locator.CenterLocator(this));
 		      
-		      this.label.installEditor(new draw2d.ui.LabelInplaceEditor());
+		      //this.label.installEditor(new draw2d.ui.LabelInplaceEditor());
 		    }
 		});
 
